@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>КиноМания - Обзоры</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Встроенные стили для оформления страницы */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1c1c1c;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a.active, nav ul li a:hover {
+            font-weight: bold;
+            color: #ff6347;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section {
+            margin-top: 50px;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+        .review-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .review-item {
+            background-color: #1c1c1c;
+            width: 90%;
+            margin: 15px;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .review-item h3 {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+        .review-item p {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="page1.html">Фильмы</a></li>
+                <li><a href="page2.html">Сериалы</a></li>
+                <li><a href="page3.html" class="active">Обзоры</a></li>
+                <li><a href="page4.html">Новости</a></li>
+                <li><a href="form_task.html">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Обзоры Фильмов и Сериалов</h2>
+            <div class="review-list">
+                <div class="review-item">
+                    <h3>Интерстеллар</h3>
+                    <p><strong>Рейтинг:</strong> 9.0/10</p>
+                    <p><strong>Обзор:</strong> Фильм Кристофера Нолана о космических путешествиях и человеческих отношениях. Зрелищный, эмоциональный и глубокий.</p>
+                </div>
+                <div class="review-item">
+                    <h3>Во все тяжкие</h3>
+                    <p><strong>Рейтинг:</strong> 9.5/10</p>
+                    <p><strong>Обзор:</strong> Один из лучших сериалов всех времён, который рассказывает о превращении добропорядочного учителя в наркобарона. Блестящая игра актёров и захватывающий сюжет.</p>
+                </div>
+                <div class="review-item">
+                    <h3>Очень странные дела</h3>
+                    <p><strong>Рейтинг:</strong> 8.7/10</p>
+                    <p><strong>Обзор:</strong> Захватывающий и ностальгический сериал, наполненный отсылками к культуре 80-х. Тайны, загадки и дружба — всё это делает сериал привлекательным.</p>
+                </div>
+                <div class="review-item">
+                    <h3>Игра престолов</h3>
+                    <p><strong>Рейтинг:</strong> 9.2/10</p>
+                    <p><strong>Обзор:</strong> Эпическая фэнтезийная сага о борьбе за власть. Превосходный сюжет, запоминающиеся персонажи и неожиданные повороты событий.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 КиноМания. Все права защищены.</p>
+    </footer>
+</body>
+</html>
