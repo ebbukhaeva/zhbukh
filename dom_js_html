@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM и JS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="dom_js.html" class="active">DOM и JS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Считываем информацию из DOM</h2>
+        <p>Фамилия: <span id="surname">Иванов</span></p>
+        <p>Имя: <span id="name">Иван</span></p>
+        <p>Год рождения: <span id="birthyear">1990</span></p>
+        <script>
+            // Считывание информации
+            let surname = document.getElementById('surname').innerText;
+            let name = document.getElementById('name').innerText;
+            let birthyear = document.getElementById('birthyear').innerText;
+            console.log(`Фамилия: ${surname}, Имя: ${name}, Год рождения: ${birthyear}`);
+        </script>
+    </main>
+</body>
+</html>
