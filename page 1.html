@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>КиноМания - Фильмы</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Встроенные стили для оформления страницы */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1c1c1c;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a.active, nav ul li a:hover {
+            font-weight: bold;
+            color: #ff6347;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section {
+            margin-top: 50px;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+        .genre-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .genre-item {
+            background-color: #1c1c1c;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #ff6347;
+            font-weight: bold;
+        }
+        .movie-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .movie-item {
+            background-color: #1c1c1c;
+            width: 300px;
+            margin: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .movie-item img {
+            width: 100%;
+            height: auto;
+        }
+        .movie-item p {
+            padding: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="page1.html" class="active">Фильмы</a></li>
+                <li><a href="page2.html">Сериалы</a></li>
+                <li><a href="page3.html">Обзоры</a></li>
+                <li><a href="page4.html">Новости</a></li>
+                <li><a href="form_task.html">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Все Жанры Фильмов</h2>
+            <div class="genre-list">
+                <div class="genre-item">Комедия</div>
+                <div class="genre-item">Драма</div>
+                <div class="genre-item">Фантастика</div>
+                <div class="genre-item">Триллер</div>
+                <div class="genre-item">Ужасы</div>
+                <div class="genre-item">Боевик</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Популярные Фильмы</h2>
+            <div class="movie-list">
+                <div class="movie-item">
+                    <img src="path/to/movie1.jpg" alt="Название фильма 1">
+                    <p><strong>Название:</strong> Интерстеллар</p>
+                    <p><strong>Жанр:</strong> Фантастика, Драма</p>
+                    <p><strong>Рейтинг:</strong> 8.6/10</p>
+                    <p>Захватывающее путешествие в глубины космоса, чтобы спасти человечество.</p>
+                </div>
+                <div class="movie-item">
+                    <img src="path/to/movie2.jpg" alt="Название фильма 2">
+                    <p><strong>Название:</strong> Темный рыцарь</p>
+                    <p><strong>Жанр:</strong> Экшн, Криминал</p>
+                    <p><strong>Рейтинг:</strong> 9.0/10</p>
+                    <p>Легендарное противостояние Бэтмена и Джокера, которое потрясет Готэм.</p>
+                </div>
+                <div class="movie-item">
+                    <img src="path/to/movie3.jpg" alt="Название фильма 3">
+                    <p><strong>Название:</strong> Зелёная миля</p>
+                    <p><strong>Жанр:</strong> Драма, Фэнтези</p>
+                    <p><strong>Рейтинг:</strong> 8.5/10</p>
+                    <p>История невероятной доброты и сострадания в стенах тюрьмы.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 КиноМания. Все права защищены.</p>
+    </footer>
+</body>
+</html>
