@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Паспортные данные</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Встроенные стили для улучшения внешнего вида страницы */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1c1c1c;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a.active, nav ul li a:hover {
+            font-weight: bold;
+            color: #ff6347;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .passport-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .passport-image {
+            width: 100%;
+            max-width: 400px;
+            border: 2px solid #ff6347;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .passport-info {
+            text-align: left;
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            background-color: #ff6347;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="page1.html">Фильмы</a></li>
+                <li><a href="page2.html">Сериалы</a></li>
+                <li><a href="page3.html">Обзоры</a></li>
+                <li><a href="page4.html">Новости</a></li>
+                <li><a href="form_task.html">Отзывы</a></li>
+                <li><a href="algorithm_task.html">Алгоритмическая Задача</a></li>
+                <li><a href="passport_data.html" class="active">Паспортные данные</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="passport-section">
+            <h2 id="title">Паспортные данные</h2>
+            <img src="images/image.png" alt="Паспортные данные" class="passport-image">
+            <div class="passport-info">
+                <p><strong id="surname-label">Фамилия:</strong> <span id="surname">Иванов</span></p>
+                <p><strong id="name-label">Имя:</strong> <span id="name">Иван</span></p>
+                <p><strong id="patronymic-label">Отчество:</strong> <span id="patronymic">Иванович</span></p>
+                <p><strong id="dob-label">Дата рождения:</strong> <span id="dob">01.01.1990</span></p>
+                <p><strong id="birthplace-label">Место рождения:</strong> <span id="birthplace">г. Москва</span></p>
+            </div>
+
+            <div class="button-container">
+                <button onclick="editPassportData()">Редактировать</button>
+                <button onclick="toggleLanguage()">Сменить язык</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 КиноМания. Все права защищены.</p>
+    </footer>
+
+    <script>
+        let isEditing = false;
+        let language = "ru";
+
+        function editPassportData() {
+            if (!isEditing) {
+                // Перевод данных в поля ввода
+                document.getElementById("surname").outerHTML = `<input id="surname" value="${document.getElementById("surname").textContent}">`;
+                document.getElementById("name").outerHTML = `<input id="name" value="${document.getElementById("name").textContent}">`;
+                document.getElementById("patronymic").outerHTML = `<input id="patronymic" value="${document.getElementById("patronymic").textContent}">`;
+                document.getElementById("dob").outerHTML = `<input id="dob" value="${document.getElementById("dob").textContent}">`;
+                document.getElementById("birthplace").outerHTML = `<input id="birthplace" value="${document.getElementById("birthplace").textContent}">`;
+                isEditing = true;
+            } else {
+                // Сохранение изменений
+                document.getElementById("surname").outerHTML = `<span id="surname">${document.getElementById("surname").value}</span>`;
+                document.getElementById("name").outerHTML = `<span id="name">${document.getElementById("name").value}</span>`;
+                document.getElementById("patronymic").outerHTML = `<span id="patronymic">${document.getElementById("patronymic").value}</span>`;
+                document.getElementById("dob").outerHTML = `<span id="dob">${document.getElementById("dob").value}</span>`;
+                document.getElementById("birthplace").outerHTML = `<span id="birthplace">${document.getElementById("birthplace").value}</span>`;
+                isEditing = false;
+            }
+        }
+
+        function toggleLanguage() {
+            const ruText = {
+                title: "Паспортные данные",
+                surname: "Фамилия",
+                name: "Имя",
+                patronymic: "Отчество",
+                dob: "Дата рождения",
+                birthplace: "Место рождения"
+            };
+
+            const enText = {
+                title: "Passport Information",
+                surname: "Surname",
+                name: "First Name",
+                patronymic: "Middle Name",
+                dob: "Date of Birth",
+                birthplace: "Place of Birth"
+            };
+
+            const text = language === "ru" ? enText : ruText;
+            document.getElementById("title").textContent = text.title;
+            document.getElementById("surname-label").textContent = text.surname + ":";
+            document.getElementById("name-label").textContent = text.name + ":";
+            document.getElementById("patronymic-label").textContent = text.patronymic + ":";
+            document.getElementById("dob-label").textContent = text.dob + ":";
+            document.getElementById("birthplace-label").textContent = text.birthplace + ":";
+
+            language = language === "ru" ? "en" : "ru";
+        }
+    </script>
+</body>
+</html>
