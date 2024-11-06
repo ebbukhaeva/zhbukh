@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>КиноМания - Новости</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Встроенные стили для оформления страницы */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1c1c1c;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a.active, nav ul li a:hover {
+            font-weight: bold;
+            color: #ff6347;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section {
+            margin-top: 50px;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .news-item {
+            background-color: #1c1c1c;
+            width: 90%;
+            margin: 15px;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .news-item h3 {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+        .news-item p {
+            margin: 5px 0;
+        }
+        .news-item a {
+            color: #ff6347;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="page1.html">Фильмы</a></li>
+                <li><a href="page2.html">Сериалы</a></li>
+                <li><a href="page3.html">Обзоры</a></li>
+                <li><a href="page4.html" class="active">Новости</a></li>
+                <li><a href="form_task.html">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Новости Кино и Сериалов</h2>
+            <div class="news-list">
+                <div class="news-item">
+                    <h3>Анонс нового сезона "Игр престолов"</h3>
+                    <p><strong>Дата:</strong> 1 ноября 2024</p>
+                    <p>Ожидается, что новый сезон "Игр престолов" выйдет в начале следующего года. Подробности о сюжете держатся в секрете, но некоторые актеры уже поделились своим мнением о новом направлении.</p>
+                    <a href="#">Читать далее...</a>
+                </div>
+                <div class="news-item">
+                    <h3>Интервью с режиссером "Очень странных дел"</h3>
+                    <p><strong>Дата:</strong> 15 октября 2024</p>
+                    <p>Режиссер популярного сериала делится своими мыслями о создании четвертого сезона и рассказывает о трудностях, с которыми столкнулась команда.</p>
+                    <a href="#">Читать далее...</a>
+                </div>
+                <div class="news-item">
+                    <h3>Кинофестиваль в Каннах 2024</h3>
+                    <p><strong>Дата:</strong> 20 сентября 2024</p>
+                    <p>На этом году Кинофестиваль в Каннах собрал огромное количество зрителей. Основные награды были вручены фильмам, которые привлекли внимание зрителей и критиков.</p>
+                    <a href="#">Читать далее...</a>
+                </div>
+                <div class="news-item">
+                    <h3>Возвращение "Во все тяжкие"</h3>
+                    <p><strong>Дата:</strong> 5 ноября 2024</p>
+                    <p>Слухи о новом проекте по "Во все тяжкие" подтвердились: сериал получит спин-офф, который расскажет о жизни некоторых персонажей после событий оригинала.</p>
+                    <a href="#">Читать далее...</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 КиноМания. Все права защищены.</p>
+    </footer>
+</body>
+</html>
