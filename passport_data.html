@@ -71,32 +71,19 @@
 	<div class="block8"> 30.11.1995 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 	<div class="block9"> г.Москва </div>
 	<div class="photo"> <img src="images3/2024-11-12 20.58.13.jpg" height="142" width="118"/> </div>
-  <button id="change"><font color="blue"><u><b>сменить яз./change lang.</b></u></font></button>
+  <button id="change"><font color="green">touch</font></button>
   </body>
   <script>const change = document.getElementById("change")
 function change_all() {
-    if (document.getElementsByTagName("div")[3].innerText === "Scomarovschii") {
-        document.body.style.backgroundImage = "url('passpotr_shablon.png')";
+    if (document.getElementsByTagName("div")[3].innerText === "Scomarovschii") {      
         document.getElementsByTagName("div")[3].innerText = "Скомаровский";
         document.getElementsByTagName("div")[4].innerText = "Максим";
         document.getElementsByTagName("div")[5].innerText = "Вадимович";
-        document.getElementsByTagName("div")[6].innerText = "муж.";
-        document.getElementsByTagName("div")[8].innerText = "г.Москва";
     }
-
     else
         if (document.getElementsByTagName("div")[3].innerText === "Скомаровский") {
-            document.body.style.backgroundImage = "url('загранчик.jpg')";
-            document.getElementsByTagName("div")[0].innerText = "";
             document.getElementsByTagName("div")[3].innerText = "Scomarovschii";
-            document.getElementsByTagName("div")[4].innerText = "Maxim";
-            document.getElementsByTagName("div")[5].innerText = "г.Москва/USSR";
-            document.getElementsByTagName("div")[6].innerText = "M";
-            document.getElementsByTagName("div")[8].innerText = "г.Москва/USSR";
-            document.getElementsByTagName("div")[1].style.marginTop= "150px";
-            document.getElementsByTagName("div")[1].style.marginRight= "30px"
-        ;
-            
+            document.getElementsByTagName("div")[4].innerText = "Maxim";    
         }
 
 
