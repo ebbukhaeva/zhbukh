@@ -115,12 +115,12 @@
     <main>
         <section class="section">
             <h2>Оставьте свой отзыв</h2>
-            <form id="reviewForm">
+            <form  action="https://www.bing.com/search?" name="user" target="_blank" id="reviewForm">
                 <label for="name">Имя:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" value='Jacob' required>
                 
                 <label for="email">Электронная почта:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" value='d@mail.ru' required>
                 
                 <label for="film">Фильм или сериал:</label>
                 <select id="film" name="film">
@@ -131,7 +131,7 @@
                 </select>
                 
                 <label for="review">Отзыв:</label>
-                <textarea id="review" name="review" rows="4" required></textarea>
+                <textarea id="review" name="review" rows="4" value='пишите свой текст сюда' required></textarea>
                 
                 <button type="submit">Отправить отзыв</button>
             </form>
