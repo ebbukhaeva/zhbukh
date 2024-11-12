@@ -21,7 +21,7 @@
         </ul>
     </form>
 </body>
-<script>function nieravienstwa() {
+<script>function n() {
     console.log("a,d")
     let A = parseFloat(ela.value);
     let D = parseFloat(eld.value);
@@ -29,9 +29,9 @@
     console.log(a,d)
     check=true;
     if (Math.sqrt(2)*A <= D) ;
-        result = " Первое выполняется";
+        result = " можно";
     } else {
-        result = " Никакое не выполняется";
+        result = "  нельзя";
     }
     document.getElementById("result").value = result;
 }
@@ -42,11 +42,11 @@ let check;
 function send() {
     let A = parseFloat(ela.value);
     
-    let D = parseFloat(elc.value);
-    if (A < B && B != C && check) {
+    let D = parseFloat(eld.value);
+    if (check) {
         document.getElementById("user").submit();
     } else {
-        alert("Что-то пошло не так. Проверьте значения или измените их")
+        alert("Что-то пошло не так")
     }
 }
 
@@ -54,7 +54,7 @@ const ela = document.getElementById("a");
 const eld = document.getElementById("d");
 
 const elverify = document.getElementById("verify");
-elverify.addEventListener('click', nieravienstwa);
+elverify.addEventListener('click', n);
 
 const elsend = document.getElementById("send");
 elsend.addEventListener('click', send)</script>
