@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html <head>
-<meta charset="UTF-8">
-
+<html>
 <head>
+<meta charset="UTF-8">
     <title>Задач</title>
 </head>
 
@@ -25,14 +24,15 @@
     let A = parseFloat(ela.value);
     let D = parseFloat(eld.value);
    
-    console.log(a,d)
+    console.log(A,D)
     check=true;
-    if (1.414*A <= D) ;
+    if (1.414*A <= D) {
         result = " можно";
     } else {
         result = "  нельзя";
     }
     document.getElementById("result").value = result;
+    return result;
 }
 
 let result;
