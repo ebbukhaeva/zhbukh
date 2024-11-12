@@ -1,145 +1,62 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html <head>
+<meta charset="UTF-8">
+
 <head>
-    <meta charset="UTF-8">
-    <title>КиноМания - Решение Алгоритмической Задачи</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #141414;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #1c1c1c;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        nav ul li a.active, nav ul li a:hover {
-            font-weight: bold;
-            color: #ff6347;
-        }
-        main {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section {
-            margin-top: 50px;
-        }
-        .section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 32px;
-        }
-        form {
-            background-color: #1c1c1c;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            margin-bottom: 30px;
-        }
-        form label {
-            display: block;
-            margin: 10px 0 5px;
-        }
-        form input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 5px;
-        }
-        form button {
-            background-color: #ff6347;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .result {
-            background-color: #1c1c1c;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 10px 0;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1c1c1c;
-            color: #777;
-        }
-    </style>
+    <title>Задач</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="page1.html">Фильмы</a></li>
-                <li><a href="page2.html">Сериалы</a></li>
-                <li><a href="page3.html">Обзоры</a></li>
-                <li><a href="page4.html">Новости</a></li>
-                <li><a href="form_task.html">Отзывы</a></li>
-                <li><a href="algorithm_task.html" class="active">Алгоритмическая Задача</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="section">
-            <h2>Решение Алгоритмической Задачи</h2>
-            <p>Задача: Найти факториал числа. Факториал числа n (обозначается n!) — это произведение всех положительных целых чисел от 1 до n.</p>
-            <form id="factorialForm">
-                <label for="number">Введите число для вычисления факториала:</label>
-                <input type="number" id="number" name="number" min="0" required>
-                <button type="submit">Вычислить</button>
-            </form>
-
-            <div class="result" id="result" style="display:none;">
-                <h3>Результат:</h3>
-                <p id="factorialResult"></p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 КиноМания. Все права защищены.</p>
-    </footer>
-    <script>
-        document.getElementById('factorialForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const number = parseInt(document.getElementById('number').value);
-            const result = factorial(number);
-            document.getElementById('factorialResult').innerText = `Факториал числа ${number} равен ${result}.`;
-            document.getElementById('result').style.display = 'block';
-        });
-
-        function factorial(n) {
-            if (n === 0 || n === 1) {
-                return 1;
-            }
-            return n * factorial(n - 1);
-        }
-    </script>
+    <p>Можно ли из бревна, имеющего диаметр поперечного сечения D, выпилить квадратный брус шириной A?</p>
+    <form action="https://www.bing.com/search?" id="user" name="luser" target="_blank">
+        <ul>
+            <li>Для поисковика:<input name="q" value="поиск"></li>
+            <li>Формулировка задачи 
+                <br><textarea cols="50" rows="4" name="formulation">Определить, выполняется ли условие 1)A < B < C или 2)A < B > C? Если выполняется - отправить все на сервер</textarea></li>
+            <li>a: <input id="a" name="a"  type="number" value="10"></li>
+            <li>b: <input id="d"  name="d" type="number" value="20"></li>
+            <li>Результат решения задачи: <input id="result" name="result" value="не определен"></li>
+            <li><input id="verify" type="button" value="Проверить условие"></li>
+            <li><input id="send" type="button" value="Отправить данные"></li>
+        </ul>
+    </form>
 </body>
+<script>function nieravienstwa() {
+    console.log("a,d")
+    let A = parseFloat(ela.value);
+    let D = parseFloat(eld.value);
+   
+    console.log(a,d)
+    check=true;
+    if (Math.sqrt(2)*A <= D) ;
+        result = " Первое выполняется";
+    } else {
+        result = " Никакое не выполняется";
+    }
+    document.getElementById("result").value = result;
+}
+
+let result;
+let check;
+
+function send() {
+    let A = parseFloat(ela.value);
+    
+    let D = parseFloat(elc.value);
+    if (A < B && B != C && check) {
+        document.getElementById("user").submit();
+    } else {
+        alert("Что-то пошло не так. Проверьте значения или измените их")
+    }
+}
+
+const ela = document.getElementById("a");
+const eld = document.getElementById("d");
+
+const elverify = document.getElementById("verify");
+elverify.addEventListener('click', nieravienstwa);
+
+const elsend = document.getElementById("send");
+elsend.addEventListener('click', send)</script>
+
 </html>
