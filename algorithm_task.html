@@ -2,41 +2,43 @@
 <html>
 <head>
 <meta charset="UTF-8">
-    <title>Задач</title>
+<title>Проверка бруса</title>
 </head>
-
 <body>
-    <p>Можно ли из бревна, имеющего диаметр поперечного сечения D, выпилить квадратный брус шириной A?</p>
-    <form action="https://www.bing.com/search?" id="user" name="user" target="_blank">
-        <ul>
-            <li>Для поисковика:<input name="q" value="поиск"></li>
-        
-            <li>a: <input id="a" name="a"  type="number" value="10"></li>
-            <li>d: <input id="d"  name="d" type="number" value="20"></li>
-            <li>Результат: <input id="result" name="result" value="не определен"></li>
-            <li><input id="verify" type="button" value="Проверить условие"></li>
-            <li><input id="send" type="button" value="Отправить данные"></li>
-        </ul>
-    </form>
+  <h1>Проверка возможности выпилить брус</h1>
+  <p>Введите диаметр бревна (D) и сторону квадрата (A):</p>
+  <form id="form">
+    <label for="diameter">Диаметр (D):</label>
+    <input type="number" id="diameter" name="diameter" value="20"><br><br>
+
+    <label for="side">Сторона (A):</label>
+    <input type="number" id="side" name="side" value="10"><br><br>
+
+    <button type="button" onclick="checkBрус()">Проверить</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    function canCutBрус(D, A) {
+      let diagonal = A * Math.sqrt(2); 
+      if (D > diagonal) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function checkBрус() {
+      let diameter = parseFloat(document.getElementById("diameter").value);
+      let side = parseFloat(document.getElementById("side").value);
+
+      if (canCutBрус(diameter, side)) {
+        document.getElementById("result").textContent = "Можно выпилить квадратный брус.";
+      } else {
+        document.getElementById("result").textContent = "Нельзя выпилить квадратный брус.";
+      }
+    }
+  </script>
 </body>
-function canCutBрус(D, A) {
-  // Диагональ квадрата
-  let diagonal = A * Math.sqrt(2); 
-  
-  // Сравнение диагонали с диаметром бревна
-  if (D > diagonal) {
-    return true; // Можно выпилить
-  } else {
-    return false; // Нельзя выпилить
-  }
-}
-
-// Пример использования
-let diameter = 20; // Диаметр бревна
-let side = 10; // Сторона квадрата
-
-if (canCutBрус(diameter, side)) {
-  console.log("Можно выпилить квадратный брус.");
-} else {
-  console.log("Нельзя выпилить квадратный брус.");
-}
+</html>
