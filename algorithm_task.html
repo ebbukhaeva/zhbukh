@@ -23,9 +23,9 @@
     function canCutBрус(D, A) {
       let diagonal = A * Math.sqrt(2); 
       if (D > diagonal) {
-        console.log("Можно выпилить квадратный брус."); 
+        return true;
       } else {
-        console.log("Нельзя выпилить квадратный брус.");
+        return false;
       }
     }
 
@@ -33,7 +33,11 @@
       let diameter = parseFloat(document.getElementById("diameter").value);
       let side = parseFloat(document.getElementById("side").value);
 
-      canCutBрус(diameter, side); 
+      if (canCutBрус(diameter, side)) {
+        document.getElementById("result").textContent = "Можно выпилить квадратный брус.";
+      } else {
+        document.getElementById("result").textContent = "Нельзя выпилить квадратный брус.";
+      }
     }
   </script>
 </body>
