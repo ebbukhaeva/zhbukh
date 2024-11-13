@@ -19,43 +19,24 @@
         </ul>
     </form>
 </body>
-<script>function n() {
-    console.log("a,d")
-    let A = parseFloat(ela.value);
-    let D = parseFloat(eld.value);
-   
-    console.log(A,D)
-    check=true;
-    if (1.414*A <= D) {
-        result = " можно";
-    } else {
-        result = "  нельзя";
-    }
-    document.getElementById("result").value = result;
-    return result;
+function canCutBрус(D, A) {
+  // Диагональ квадрата
+  let diagonal = A * Math.sqrt(2); 
+  
+  // Сравнение диагонали с диаметром бревна
+  if (D > diagonal) {
+    return true; // Можно выпилить
+  } else {
+    return false; // Нельзя выпилить
+  }
 }
 
-let result;
-let check;
+// Пример использования
+let diameter = 20; // Диаметр бревна
+let side = 10; // Сторона квадрата
 
-function send() {
-    let A = parseFloat(ela.value);
-    
-    let D = parseFloat(eld.value);
-    if (check) {
-        document.getElementById("user").submit();
-    } else {
-        alert("Что-то пошло не так")
-    }
+if (canCutBрус(diameter, side)) {
+  console.log("Можно выпилить квадратный брус.");
+} else {
+  console.log("Нельзя выпилить квадратный брус.");
 }
-
-const ela = document.getElementById("a");
-const eld = document.getElementById("d");
-
-const elverify = document.getElementById("verify");
-elverify.addEventListener('click', n);
-
-const elsend = document.getElementById("send");
-elsend.addEventListener('click', send)</script>
-
-</html>
